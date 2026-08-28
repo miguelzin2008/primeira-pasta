@@ -1,0 +1,32 @@
+<html>
+<body>
+<h3>Exercício 4</h3>
+<p>Digite um numero<p>
+<input type="number" id="numero" placeholder="Digite um numero"/>
+<p id="resultado"></p>
+<script>
+     document.querySelector('#numero').addEventListener("change", function(){
+         if(this.value > 0){
+              document.querySelector('#resultado').style.color = 'green';
+              document.querySelector('#resultado').textContent = this.value  + ' é positivo';
+         
+        }else if(this.value < 0){
+             document.querySelector('#resultado').style.color = 'red';
+             document.querySelector('#resultado').textContent = this.value  + ' é negativo';
+        }else{
+             document.querySelector('#resultado').style.color = 'grey';
+             document.querySelector('#resultado').textContent = this.value  + ' é neutro';
+        }
+     })
+     
+     setInterval(function(){
+     if(document.querySelector('h3').style.color == 'black'){
+        document.querySelector('h3').style.color  = 'blue';
+    }else if(document.querySelector('h3').style.color == 'blue'){
+        document.querySelector('h3').style.color = 'purple';
+    }else if(document.querySelector('h3').style.color == 'purple'){
+        document.querySelector('h3').style.color = 'yellow';
+    }else {
+        document.querySelector('h3').style.color = 'black';
+        }},1000);
+</script>
