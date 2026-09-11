@@ -1,0 +1,116 @@
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Comparação de Números</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    }
+
+    .container {
+        width: 90%;
+        max-width: 450px;
+        background-color: white;
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 5px rgba(99, 102, 241, 0.4);
+    }
+
+    button {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border-radius: 8px;
+        background-color: #4f46e5;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #3730a3;
+        transform: translateY(-2px);
+    }
+
+    h3 {
+        margin-top: 25px;
+        padding: 15px;
+        text-align: center;
+        color: #333;
+        background-color: #f3f4f6;
+        border-radius: 8px;
+        min-height: 50px;
+    }
+</style>
+
+</head> <body>
+<div class="container">
+    <h1>Comparação de Números</h1>
+
+    <p>Digite o primeiro número:</p>
+    <input type="number" id="caixa1">
+
+    <p>Digite o segundo número:</p>
+    <input type="number" id="caixa2">
+
+    <button>Analisar</button>
+
+    <h3></h3>
+</div>
+
+<script>
+    let caixa1 = document.querySelector("#caixa1");
+    let caixa2 = document.querySelector("#caixa2");
+    let botao = document.querySelector("button");
+    let resultado = document.querySelector("h3");
+
+    botao.addEventListener("click", function(){
+        if(Number(caixa1.value) > Number(caixa2.value)){
+            resultado.textContent = 'O maior número é ' + caixa1.value;
+        }else if(Number(caixa2.value) > Number(caixa1.value)){
+            resultado.textContent = 'O maior número é ' + caixa2.value;
+        }else {
+            resultado.textContent = 'Os valores são iguais!';
+        }
+    })
+</script>
+
+</body> </html>
