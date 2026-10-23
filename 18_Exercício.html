@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de input</title>
+</head>
+<body>
+    <p>Digite o valor em Reais (para Dolar)</p>
+    <input type="number" id="dolarCaixa" />
+    <p id="resultadoDolar"></p>
+    <p>Digite o valor em Reais (para Yuan)</p>
+    <input type="number" id="yuanCaixa" />
+    <p id="resultadoYuan"></p>
+    <p>Digite o valor em Reais (para Euro)</p>
+    <input type="number" id="euroCaixa" />
+    <p id="resultadoEuro"></p>
+    <p>Digite o valor em Reais (para Pesos Argentinos)</p>
+    <input type="number" id="pesoCaixa" />
+    <p id="resultadoPeso"></p>
+    <script>
+
+        let dolar = document.querySelector('#dolarCaixa');
+        let resultadoDolar = document.querySelector('#resultadoDolar');
+        dolar.addEventListener('change', function(){
+            resultadoDolar.textContent = ' O valor em dolares é ' + Number(this.value) / 5.02;
+        })
+        let yuan = document.querySelector('#yuanCaixa');
+        let resultadoyuan = document.querySelector('#resultadoYuan');
+        yuan.addEventListener('change', function(){
+            resultadoyuan.textContent = ' O valor em yuanes é ' + Number(this.value) / 0.75;
+        });
+        let euro = document.querySelector('#euroCaixa');
+        let resultadoeuro = document.querySelector('#resultadoEuro');
+        euro.addEventListener('change', function(){
+            resultadoeuro.textContent = ' O valor em euros é ' + Number(this.value) / 5.58;
+        });
+        let peso = document.querySelector('#pesoCaixa');
+        let resultadopeso = document.querySelector('#resultadoPeso');
+        peso.addEventListener('change', function(){
+            resultadopeso.textContent = ' O valor em pesos é ' + Number(this.value) / 0.00066;
+        });
+    </script>
+</body>
+</html>

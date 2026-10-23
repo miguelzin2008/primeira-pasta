@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <input type="text">
+    <button>Limpar</button>
+    <script>
+        let h1 = document.querySelector('h1');
+        let input = document.querySelector('input');
+        let button = document.querySelector('button');
+        input.addEventListener('change', function(){
+            h1.textContent = input.value;
+        });
+        button.addEventListener('click', function(){
+            h1.textContent ='';
+            input.value ='';
+        });
+    </script>
+</body>
+</html>
